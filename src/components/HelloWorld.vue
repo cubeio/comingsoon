@@ -1,7 +1,7 @@
 <template>
    <div class="content page_contain">
                 <div class="bg">
-                    <video poster="/img/cubes.jpg" playsinline="" autoplay="" muted="" loop="">
+                    <video poster="/images/cubes.jpg" playsinline="" autoplay="" muted="" loop="">
                         <source src="/video/cubes.mp4" type="video/mp4">
                     </video>
                 </div>
