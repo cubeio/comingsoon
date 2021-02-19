@@ -1,38 +1,16 @@
 <template>
-  <h1>{{ msg }}</h1>
+   <div class="content page_contain">
+                <div class="bg">
+                    <video poster="/img/cubes.jpg" playsinline="" autoplay="" muted="" loop="">
+                        <source src="/video/cubes.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="title m-b-md">
+                    cube.io
+                </div>
+                <p>in the works..</p>
 
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Documentation</a> |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
-  <p>
-    Recommended setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a
-      href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
-      target="_blank"
-    >Vetur</a>
-    +
-    <a
-      href="https://marketplace.visualstudio.com/items?itemName=znck.vue-language-features"
-      target="_blank"
-    >Vue DX</a>
-  </p>
-  <p>
-    Make sure to use workspace version of TypeScript to get improved support via
-    <a
-      href="https://github.com/znck/vue-developer-experience"
-      target="_blank"
-    >@vuedx</a>.
-    <br />Note @vuedx is still experimental and this setup is provided for early feedback.
-  </p>
-  <button @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+            </div>
 </template>
 
 <script lang="ts">
@@ -54,7 +32,74 @@ export default defineComponent({
 </script>
 
 <style scoped>
-a {
-  color: #42b983;
-}
+            html, body {
+                color: #636b6f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+            .page_contain{
+                position: relative;
+                max-width: 100em;
+                margin: 0 auto;
+                padding: 0 5.5%;
+            }
+            .bg video {
+                max-width: 100%;
+            }
+            @media (min-width: 50em){
+                .bg {
+                    display: block;
+                    position: absolute;
+                    z-index: -2;
+                    top: 50%;
+                    left: 0;
+                    width: 180%;
+                    -webkit-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+                }
+            }
 </style>
